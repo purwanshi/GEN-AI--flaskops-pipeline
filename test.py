@@ -1,7 +1,13 @@
-import requests
+from app import app
 
-info = requests.get("http://localhost:5000/info")
-print("Info endpoint:", info.text)
+def test_info():
+    tester = app.test_client()
+    response = tester.get('/info')
+    assert response.status_code == 200
+    assert b"i am lw from india" in response.data
 
-phone = requests.get("http://localhost:5000/phone")
-print("Phone endpoint:", phone.text)
+def test_phone():
+    tester = app.test_client()
+    response = tester.get('/phone')
+    assert response.status_code == 200
+    assert b"3465797865" in response.data
