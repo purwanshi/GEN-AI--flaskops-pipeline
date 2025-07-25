@@ -1,4 +1,4 @@
-🧨🧨DEVOPS MEGA PROJECT ALERT!!- "Flask-jenkins pipeine"
+🧨🧨DEVOPS MEGA PROJECT ALERT!!- "GEN-AI--Flask-ops pipeine"
 
 ⿡ GEN-AI+Flask Web App + CI/CD
 ✔ Flask App Generation using GenAI – Prompted a Generative AI model to scaffold a Flask app with two endpoints: /info and /phone
