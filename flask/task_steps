@@ -1,0 +1,38 @@
+prequistes-docker login 
+
+1.start jenkins
+make changes so docker commands run in jenkins
+->change the configuration file
+vim /etc/sudoers
+jenkins ALL=(ALL)            NOPASSWD:ALL
+esc :!i,!wq,i!
+
+->add -d infront of-it commands to make docker commands unintercative 
+
+->add sudo in front of docker commands
+sudo  docker run -dit ubuntu:14.04
+...........................................................................
+2.start new project in jenkins
+execute shell commands
+
+# Build the Docker image
+sudo docker build -t app:v1 .
+
+# Stop and remove existing container if running
+sudo docker rm -f flask-app || true
+
+# Build image again (redundant if you already built above, but good after rmi)
+sudo docker build -t app:v1 .
+
+# Run new container from the latest image
+sudo docker run -d -p 5000:5000 --name flask-app app:v1
+...........................................................................
+
+3.use trigger poll SCM  to build by pulling latest updated code form github-
+add space between stars
+auto build after evry 5 min (* * * * *)
+
+..........................................................................
+4.use curl command to runthe endpoints
+/info and updated /phone
+
