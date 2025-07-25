@@ -6,4 +6,4 @@
 ✔ dockerize flask app
 ✔ GitHub Webhook & Jenkins SCM Polling using triggers
 ✔ Deploy using Jenkins 
-✔ Endpoint Testing via curl to simulate client requests on /phone and /info
+✔ Endpoint Testing via curl to simulate client requests on /phone and /info.
